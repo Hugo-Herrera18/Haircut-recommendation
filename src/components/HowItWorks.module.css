@@ -1,0 +1,117 @@
+.section {
+  background-color: var(--bg-gray);
+  padding: 80px 0;
+  border-top: 1px solid var(--border-light);
+  border-radius: 40px 40px 0 0; /* Add rounded top as seen in design */
+  margin-top: -40px; /* Overlap hero slightly */
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.stepCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.iconContainer {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  position: relative;
+  color: var(--text-dark);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.stepNumber {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  background-color: var(--bg-light);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.stepTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.stepDescription {
+  font-size: 14px;
+  color: var(--text-dark-secondary);
+  line-height: 1.5;
+}
+
+.connector {
+  position: absolute;
+  top: 40px;
+  right: -50%;
+  width: calc(100% - 80px);
+  height: 0;
+  border-top: 1px dashed var(--border-light);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Adjust the connector position and width based on container width */
+.stepCard {
+  z-index: 2;
+}
+
+@media (max-width: 992px) {
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+  
+  .connector {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+}

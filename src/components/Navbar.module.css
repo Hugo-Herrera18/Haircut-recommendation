@@ -1,0 +1,79 @@
+.navbar {
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  background-color: var(--text-dark);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logoText {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text-dark);
+}
+
+.logoMatch {
+  font-weight: 700;
+  color: var(--text-dark-secondary);
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.navLinks a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark-secondary);
+  transition: color 0.2s;
+  padding-bottom: 4px;
+}
+
+.navLinks a:hover {
+  color: var(--text-dark);
+}
+
+.navLinks a.active {
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--text-dark);
+}
+
+.ctaButton {
+  background-color: var(--text-dark);
+  color: var(--bg-light);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+}
+
+.ctaButton:hover {
+  opacity: 0.9;
+}
